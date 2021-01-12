@@ -38,7 +38,7 @@ docker start xcontainer_name
 
 > **Structured Logging**
 >
->> Starting in `MongoDB 4.4`, **`mongod / mongosinstances` output all log messages in structured JSON format**. Log entries are written as a series of key-value pairs, where each key indicates a log message field type,such as “severity”, and each corresponding value records the associated logging information for that field type, such as “informational”. *Previously, log entries were output as plaintext*.
+>> Starting in `MongoDB 4.4`, **`mongod / mongosinstances` output all log messages in structured JSON format**. Log entries are written as a series of key-value pairs, where each key indicates a log message field type, such as “severity”, and each corresponding value records the associated logging information for that field type, such as “informational”. *Previously, log entries were output as plaintext*.
 
 **Seguir leyendo**
 
@@ -52,4 +52,4 @@ docker start xcontainer_name
 
 **NOTA**
 
-Se utilizó cada episodio como referencia. El resultado final difiere del contenido original. Si bien la aproximación al tema es la misma, el código fue ligeramente modificado, personalizado, para un mejor entendimiento.
+Se utilizó el tutorial como referencia. El resultado final difiere del contenido original. Si bien la aproximación al tema es la misma, el código fue ligeramente modificado, personalizado, para un mejor entendimiento.
