@@ -1,0 +1,19 @@
+GET http://localhost:5001/mongodb HTTP/1.1
+Content-Type: application/json
+
+{"database": "streaming", "collection": "movie"}
+###
+POST http://localhost:5001/mongodb HTTP/1.1
+Content-Type: application/json
+
+{"database": "streaming", "collection": "movie", "Document": {"title": "Army of Darkness", "genre": "Horror", "release_theaters": 1992}}
+###
+PUT http://localhost:5001/mongodb HTTP/1.1
+Content-Type: application/json
+
+{"database": "streaming", "collection": "movie", "Filter": {"title": "The Evil Dead"}, "DataToBeUpdated": {"release_streaming": 2016}}
+###
+DELETE http://localhost:5001/mongodb HTTP/1.1
+Content-Type: application/json
+
+{"database": "streaming", "collection": "movie", "Filter": {"title": "Evil Dead 2: Dead by Dawn"}}
