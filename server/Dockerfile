@@ -1,14 +1,14 @@
-FROM python:3.9
-
-ENV PYTHONUNBUFFERED 1
+FROM  python:3.9
 
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt /opt/
-RUN pip3 install -r /opt/requirements.txt
+RUN pip3 --no-cache-dir install -r /opt/requirements.txt
 
 WORKDIR /opt
 
-ENV FLASK_APP=app.py
-ENV FLASK_DEBUG=1
-CMD ["flask", "run", "--host", "0.0.0.0", "--port", "5000"]
+COPY ["app.py", "/opt"]
+
+EXPOSE 5001
+
+CMD ["python3", "app.py"]
